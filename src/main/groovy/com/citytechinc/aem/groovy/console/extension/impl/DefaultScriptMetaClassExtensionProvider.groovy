@@ -8,7 +8,7 @@ import com.day.cq.replication.Replicator
 import com.day.cq.search.PredicateGroup
 import com.day.cq.search.QueryBuilder
 import com.day.cq.wcm.api.PageManager
-import org.apache.felix.scr.ScrService
+import org.osgi.service.component.runtime.ServiceComponentRuntime
 import org.apache.felix.scr.annotations.Activate
 import org.apache.felix.scr.annotations.Component
 import org.apache.felix.scr.annotations.Reference
@@ -27,7 +27,7 @@ class DefaultScriptMetaClassExtensionProvider implements ScriptMetaClassExtensio
     Replicator replicator
 
     @Reference
-    ScrService scrService
+    ServiceComponentRuntime scrService
 
     @Reference
     QueryBuilder queryBuilder
